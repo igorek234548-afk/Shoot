@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfg17f0efr70u"]
+
+[ext_resource type="Texture2D" uid="uid://rr1smumloors" path="res://asets/2_12.jpg" id="1_g2tbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2tbl"]
+size = Vector2(2800, 2400)
+
+[node name="box" type="StaticBody2D"]
+collision_mask = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -1.1920929e-07)
+scale = Vector2(0.055, 0.047)
+texture = ExtResource("1_g2tbl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.02, 0.02)
+shape = SubResource("RectangleShape2D_g2tbl")

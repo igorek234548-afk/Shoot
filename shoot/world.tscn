@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://rjcm3x2i0j5f"]
+
+[ext_resource type="Script" uid="uid://b423if50f4f63" path="res://screpst/world.gd" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://bfg17f0efr70u" path="res://box.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://cp03ipnmdilvc" path="res://plaery.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://emicyb4jpcak" path="res://character_body_2d.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bxj3qxywjrnim" path="res://stena.tscn" id="5_036b0"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_gv5m4"]
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_aqk2v")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.15873006, 0.21284914, 0.06843653, 1)
+position = Vector2(913.99994, 816.00006)
+scale = Vector2(8397, 5329.999)
+mesh = SubResource("QuadMesh_gv5m4")
+
+[node name="box" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(315, -189)
+
+[node name="box2" parent="box" instance=ExtResource("1_f3sb7")]
+position = Vector2(456, 243)
+
+[node name="box3" parent="box/box2" instance=ExtResource("1_f3sb7")]
+position = Vector2(-179, 99)
+
+[node name="box" parent="box/box2/box3" instance=ExtResource("1_f3sb7")]
+position = Vector2(280, 345)
+
+[node name="box" parent="box/box2/box3/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(-285, 26)
+
+[node name="box" parent="box/box2/box3/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(-363, 215)
+
+[node name="box" parent="box/box2/box3/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(381, -13)
+
+[node name="box" parent="box/box2/box3/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(233, 0)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(114, -508)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(-280, -431)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(-454, -88)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(52, 412)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(182, -153)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(96, -231)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(392, -65)
+
+[node name="box" parent="box/box2/box3/box/box/box/box/box/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(-179, 669)
+
+[node name="box4" parent="box/box2/box3/box/box/box/box/box/box/box/box/box/box/box/box/box" instance=ExtResource("1_f3sb7")]
+position = Vector2(171, -521)
+
+[node name="box5" parent="box/box2/box3/box/box/box/box/box/box/box/box/box/box/box/box/box/box4" instance=ExtResource("1_f3sb7")]
+position = Vector2(-598, 715)
+
+[node name="plaery" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(464, 281)
+
+[node name="enemy" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(1092, -402)
+
+[node name="maincavera" type="Camera2D" parent="."]
+
+[node name="stena" parent="." instance=ExtResource("5_036b0")]
+position = Vector2(-11, -505)
+
+[node name="enemy2" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(1080, 716)
+
+[node name="enemy3" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(63, 741)
+
+[node name="enemy4" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(42, -333)
